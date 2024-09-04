@@ -7,7 +7,8 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
     background-color: #fff;
     padding: 20px;
@@ -22,12 +23,14 @@ h1 {
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
 th, td {
-    padding: 12px;
+    padding: 8px;
     text-align: center;
     border: 1px solid #ddd;
+    font-size: 14px;
 }
 
 button {
@@ -36,7 +39,8 @@ button {
     padding: 10px 15px;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 10px;
+    font-size: 14px;
 }
 
 button:hover {
@@ -66,4 +70,42 @@ button.undo:hover {
 #student-list td button {
     padding: 5px 10px;
     margin: 0 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    table, th, td {
+        display: block;
+        width: 100%;
+    }
+
+    th, td {
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: left;
+        border: none;
+        font-size: 14px;
+    }
+
+    th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    td {
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        white-space: nowrap;
+    }
 }

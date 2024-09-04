@@ -110,15 +110,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const row = document.createElement("tr");
 
             row.innerHTML = `
-                <td>${student.name}</td>
-                <td>${student.attendance}</td>
-                <td>${student.absences}</td>
-                <td>
+                <td data-label="Nombre del Alumno">${student.name}</td>
+                <td data-label="Asistencias">${student.attendance}</td>
+                <td data-label="Faltas">${student.absences}</td>
+                <td data-label="Acción">
                     <button onclick="updateAttendance(${index}, true)">Presente</button>
                     <button onclick="updateAttendance(${index}, false)">Ausente</button>
                 </td>
-                <td>${student.status}</td>
-                <td><button class="delete" onclick="deleteStudent(${index})">Eliminar</button></td>
+                <td data-label="Estado">${student.status}</td>
+                <td data-label="Eliminar"><button class="delete" onclick="deleteStudent(${index})">Eliminar</button></td>
             `;
 
             studentList.appendChild(row);
