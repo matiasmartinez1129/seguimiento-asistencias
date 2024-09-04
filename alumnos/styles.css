@@ -1,0 +1,69 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button.delete {
+    background-color: #f44336; /* Botón de eliminar en rojo */
+}
+
+button.delete:hover {
+    background-color: #e53935;
+}
+
+button.undo {
+    background-color: #ffa500; /* Botón de deshacer en naranja */
+}
+
+button.undo:hover {
+    background-color: #ff8c00;
+}
+
+.hidden {
+    display: none;
+}
+
+#student-list td button {
+    padding: 5px 10px;
+    margin: 0 5px;
+}
